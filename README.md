@@ -2,6 +2,11 @@
 
 Projet Discoverl3i
 
+Les routes:
+ - localhost:8082/questionToAsk/{joueur}   /* HTTP  GET */
+ - localhost:8082/addJoueur    /* HTTP  POST */
+ - localhost:8082/curiosite    /* HTTP POST */
+ - localhost:8082/progression   /* HTTP POST */
 
 Dans cette partie nous expliquerons la communication entre senariste et globalAPIServer.
 

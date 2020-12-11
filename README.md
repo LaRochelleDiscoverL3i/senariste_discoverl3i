@@ -43,7 +43,8 @@ Chaque fois l'analyste fait des analyses sur la progression d'un joueur , global
     ex: 
     {
         - "joueur": "toto"
-        - progression: "bas"
+        - progression: "bas",
+        - "chercheur": "Armelle Prigent"
     }
   des que le senariste recoit le json , il fait des traitement et fait Post automatiquement sur globalAPIServer avec le json suivant :
     {

@@ -1,4 +1,4 @@
-package com.example.senariste;
+package com.example.senariste.classes;
 
 public class Progression {
 

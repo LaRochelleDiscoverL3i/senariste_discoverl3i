@@ -1,4 +1,4 @@
-package com.example.senariste;
+package com.example.senariste.classes;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,11 +13,26 @@ public class AskServiceImp implements AskService{
     ArrayList<Joueur> joueurs = new ArrayList<Joueur>(); // Create an ArrayList object
 
 
+    @Override
+    public ArrayList<Joueur> getJoueurs() {
+        return joueurs;
+    }
 
     @Override
     public void addJoeur(Joueur joueur) {
 
+        for(Joueur j : joueurs)
+        {
+            if(j.getJoueur().equals(joueur.getJoueur())){
+                joueurs.remove(j);
+
+
+            }
+
+        }
         joueurs.add(joueur);
+
+
 
     }
 
@@ -52,12 +67,12 @@ public class AskServiceImp implements AskService{
 
     @Override
     public void addCuriosite(Curiosite curiosite) {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, String> map = new HashMap<String, String>();
         RestTemplate template = new RestTemplate();
-        String url = "http://localhost:8080/api";
+        String url = "http://localhost:8080/api_curiosite";
         if(curiosite.getCuriosite().equals("eleve")){
 
-            map.put(curiosite.getJoueur(), niveau(curiosite.getJoueur()) );
+            map.put(curiosite.getJoueur(), curiosite.getChercheur());
             template.postForLocation(url, map);
         }
 
@@ -70,7 +85,7 @@ public class AskServiceImp implements AskService{
 
         Map<String, Integer> map = new HashMap<String, Integer>();
         RestTemplate template = new RestTemplate();
-        String url = "http://localhost:8080/api";
+        String url = "http://localhost:8080/api_progression";
         if(progression.getProgression().equals("bas")){
 
             map.put(progression.getJoueur(), 1 );

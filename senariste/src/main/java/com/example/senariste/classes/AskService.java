@@ -1,7 +1,6 @@
-package com.example.senariste;
+package com.example.senariste.classes;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public interface AskService {
 
@@ -10,6 +9,6 @@ public interface AskService {
     public abstract Joueur searchQuestion(String joueur);
     public abstract void addCuriosite(Curiosite curiosite);
     public abstract void addProgression(Progression progression);
-
+    public abstract ArrayList<Joueur> getJoueurs();
 
 }

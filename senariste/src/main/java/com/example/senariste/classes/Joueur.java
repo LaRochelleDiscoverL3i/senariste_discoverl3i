@@ -1,4 +1,4 @@
-package com.example.senariste;
+package com.example.senariste.classes;
 
 public class Joueur {
 
@@ -15,6 +15,7 @@ public class Joueur {
         this.joueur=joueur;
         this.level_game=level_game;
     }
+
 
     public String getJoueur() {
         return joueur;

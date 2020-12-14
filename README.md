@@ -79,13 +79,15 @@ Chaque fois l'analyste fait des analyses sur la curiosite d'un joueur , globalAP
     }
   des que le senariste recoit le json , il fait des traitement et fait Post automatiquement sur globalAPIServer avec le json suivant :
     {
-        -joueur: chercheur
+        -joueur: 
+        - poser
     }
     
 
     ex:
     {
-        -"joueur": "Jeanloup Guillaume"    / * 
+       - "joueur": "titi"
+        -"poser": "Jeanloup Guillaume"    / * 
     }
 
     des que globalAPIServer recoit le json , elle doit automatiquement changer la question sur l'url de phonegap de la joueur en lui posant une question sur "Jeanloup Guillaume" dans l'exemple en dessus.

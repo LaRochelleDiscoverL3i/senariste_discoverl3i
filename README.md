@@ -43,6 +43,7 @@ Chaque fois l'analyste fait des analyses sur la progression d'un joueur , global
     {
         - joueur
         - progression
+        - chercheur
     }
 
     ex: 

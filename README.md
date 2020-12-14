@@ -59,7 +59,8 @@ Chaque fois l'analyste fait des analyses sur la progression d'un joueur , global
 
     ex:
     {
-        -"joueur": 4    / *  4 level de la question à poser au joueur
+        - "joueur": "toto"
+        -"level": 4    / *  4 level de la question à poser au joueur
     }
 
     des que globalAPIServer recoit le json , elle doit automatiquement changer la question sur l'url phonegap de la joueur en lui posant une question de niveau de difficilite 4 dans l'exemple en dessus.

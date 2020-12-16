@@ -39,7 +39,37 @@ Pour que globalApiServer pose une question au joueur, il fait un get sur senaris
 
 
 
-Chaque fois l'analyste fait des analyses sur la progression d'un joueur , globalAPIServer fait un Post sur l'url (localhost:port//progression) du senariste avec le json suivant :
+Chaque fois l'analyste fait des analyses sur la progression d'un joueur , globalAPIServer fait un Post sur l'url (localhost:port/curiosite) du senariste avec le json suivant :
+    {
+        - joueur
+        - curiosite
+        - chercheur
+    }
+
+    ex: 
+    {
+        - "joueur": "toto"
+        - "curiosite": "bas",
+        - "chercheur": "Armelle Prigent"
+    }
+  des que le senariste recoit le json , il fait des traitement et fait Post automatiquement sur globalAPIServer avec le json suivant :
+    {
+        -joueur 
+        - level
+    }
+    
+
+    ex:
+    {
+        - "joueur": "toto"
+        -"level": 4    / *  4 level de la question à poser au joueur
+    }
+
+    des que globalAPIServer recoit le json , elle doit automatiquement changer la question sur l'url phonegap de la joueur en lui posant une question de niveau de difficilite 4 dans l'exemple en dessus.
+
+
+
+Chaque fois l'analyste fait des analyses sur la curiosite d'un joueur , globalAPIServer fait un Post sur l'url (localhost:port/progression) du senariste avec le json suivant :
     {
         - joueur
         - progression
@@ -48,52 +78,23 @@ Chaque fois l'analyste fait des analyses sur la progression d'un joueur , global
     ex: 
     {
         - "joueur": "toto"
-        - progression: "bas",
-        - "chercheur": "Armelle Prigent"
+        - progression: "eleve"
     }
   des que le senariste recoit le json , il fait des traitement et fait Post automatiquement sur globalAPIServer avec le json suivant :
     {
-        -joueur: number
+        -joueur: 
+        - poser
     }
     
 
     ex:
     {
-        -"joueur": 4    / *  4 level de la question à poser au joueur
-    }
-
-    des que globalAPIServer recoit le json , elle doit automatiquement changer la question sur l'url phonegap de la joueur en lui posant une question de niveau de difficilite 4 dans l'exemple en dessus.
-
-
-
-Chaque fois l'analyste fait des analyses sur la curiosite d'un joueur , globalAPIServer fait un Post sur l'url (localhost:port//curiosite) du senariste avec le json suivant :
-    {
-        - joueur
-        - curiosite
-    }
-
-    ex: 
-    {
-        - "joueur": "toto"
-        - curiosite: "eleve"
-    }
-  des que le senariste recoit le json , il fait des traitement et fait Post automatiquement sur globalAPIServer avec le json suivant :
-    {
-        -joueur: chercheur
-    }
-    
-
-    ex:
-    {
-        -"joueur": "Jeanloup Guillaume"    / * 
+       - "joueur": "titi"
+        -"poser": "Jeanloup Guillaume"  
     }
 
     des que globalAPIServer recoit le json , elle doit automatiquement changer la question sur l'url de phonegap de la joueur en lui posant une question sur "Jeanloup Guillaume" dans l'exemple en dessus.
 
 
 
-
 Remarque : reste des petites amelioration à faire peut-etre.
-
-
-
